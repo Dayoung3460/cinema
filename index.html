@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cinema</title>
+  </head>
+  <body>
+      <header class="fixed-top">
+        <!--================= top bar / social btns ================== -->
+        <div class="top-bar bg-white">
+            <div class="container">
+                <div class="col-12 text-right">
+                    <a class="nav-link text-primary" href="#">
+                        <i class="fab fa-facebook-f fa-lg mr-3"></i>
+                        <i class="fab fa-instagram-square fa-lg"></i>
+                     </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================= nav-bar ========================= -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="#">logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"  aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">상영영화</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">계봉 예정 영화</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">이벤트/공지</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">멤버쉽</a>
+                </li>
+              </ul>
+              <hr>
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0 menu-right">
+                <li class="nav-item active ">
+                    <a class="nav-link text-primary" href="#">로그인</a>
+                    
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link text-primary" href="#">회원가입</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <br>
+        <!-- =======================carousel container =======================-->
+        <main>
+            <section class="sec1">
+                <div id="demo" class="carousel slide mt-3" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/m1.png" alt="Los Angeles" width="100%" height="100%">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/m2.jpg" alt="Chicago" width="100%" height="100%">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/m3.jpg" alt="New York" width="100%" height="100%">
+                      </div>
+                    </div>
+                    
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+          </section>
+          
+          <section class="sec2">
+              <!-- ========================movie section=============================== -->
+              <div class="container d-flex justify-content-center"><br> 
+                <div class="row mt-5"> 
+                    <div class="col-15 w-15 mr-3" > 
+                        <button type="button" class="btn btn-primary" onclick="viewByDate()">날짜별로 보기</button>
+                    </div> 
+                    <div class="col-15 w-15"> 
+                        <button type="button" class="btn btn-primary" onclick="viewByMovie()">영화별로 보기</button>
+                    </div> 
+                </div> 
+              </div> 
+              <br>
+              <div id="viewByDate">
+                <div class="container d-flex justify-content-center"><br>
+                  <div class="row my-3 mx-5 mDate"> 
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    </div> 
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    </div> 
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    </div>
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    </div>
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    </div>
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    </div>
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-success btn-lg mt-2"><i class="fas fa-calendar-alt"></i></button>
+                    </div>
+                  </div> 
+                </div>
+                <div class="container"><br>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg1.jfif" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">movie detail</div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <button type="button" class="btn btn-info my-1">09:00</button>
+                      <button type="button" class="btn btn-info my-1">11:00</button>
+                      <button type="button" class="btn btn-info my-1">15:30</button>
+                      <button type="button" class="btn btn-info my-1">18:10</button>
+                    </div>
+                  </div>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg2.jfif" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">movie detail</div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <button type="button" class="btn btn-info my-1">09:00</button>
+                      <button type="button" class="btn btn-info my-1">11:00</button>
+                      <button type="button" class="btn btn-info my-1">15:30</button>
+                      <button type="button" class="btn btn-info my-1">18:10</button>
+                    </div>
+                  </div>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg3.jfif" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">movie detail</div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <button type="button" class="btn btn-info my-1">09:00</button>
+                      <button type="button" class="btn btn-info my-1">11:00</button>
+                      <button type="button" class="btn btn-info my-1">15:30</button>
+                      <button type="button" class="btn btn-info my-1">18:10</button>
+                    </div>
+                  </div>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg4.png" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">movie detail</div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <button type="button" class="btn btn-info my-1">09:00</button>
+                      <button type="button" class="btn btn-info my-1">11:00</button>
+                      <button type="button" class="btn btn-info my-1">15:30</button>
+                      <button type="button" class="btn btn-info my-1">18:10</button>
+                    </div>
+                  </div>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg5.jfif" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">movie detail</div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <button type="button" class="btn btn-info my-1">09:00</button>
+                      <button type="button" class="btn btn-info my-1">11:00</button>
+                      <button type="button" class="btn btn-info my-1">15:30</button>
+                      <button type="button" class="btn btn-info my-1">18:10</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="viewByMovie"><br>
+                <div class="container d-flex justify-content-center"><br>
+                  <div class="row my-3 mx-5 mGenre"> 
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-success">한국 영화</button>
+                    </div> 
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-success">외국 영화</button>
+                    </div> 
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">로맨스</button>
+                    </div>
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">코미디</button>
+                    </div>
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">액션</button>
+                    </div>
+                    <div class="col mx-1"> 
+                      <button type="button" class="btn btn-secondary">공포</button>
+                    </div>
+                  </div> 
+                </div>
+                <div class="container">
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg1.jfif" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <p>movie detail</p>
+                      <button type="button" class="btn btn-warning my-1">예고편</button>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 mx-3 p-2">
+                      <div class="border p-2 my-1">
+                        <span class="mr-2" style="height: 100%">08/01 토</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                      <div class="border p-2 my-1">
+                        <span class="mr-2">08/02 일</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg2.jfif" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <p>movie detail</p>
+                      <button type="button" class="btn btn-warning my-1">예고편</button>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 mx-3 p-2">
+                      <div class="border p-2 my-1">
+                        <span class="mr-2" style="height: 100%">08/01 토</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                      <div class="border p-2 my-1">
+                        <span class="mr-2">08/02 일</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg3.jfif" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <p>movie detail</p>
+                      <button type="button" class="btn btn-warning my-1">예고편</button>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 mx-3 p-2">
+                      <div class="border p-2 my-1">
+                        <span class="mr-2" style="height: 100%">08/01 토</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                      <div class="border p-2 my-1">
+                        <span class="mr-2">08/02 일</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg4.png" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <p>movie detail</p>
+                      <button type="button" class="btn btn-warning my-1">예고편</button>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 mx-3 p-2">
+                      <div class="border p-2 my-1">
+                        <span class="mr-2" style="height: 100%">08/01 토</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                      <div class="border p-2 my-1">
+                        <span class="mr-2">08/02 일</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-5 border py-3 mDetail">
+                    <div class="col-sm-3 col-md-2 col-lg-2 mx-3">
+                      <div class="thumbnail">
+                        <a href="movie detail page" target="_blank">
+                          <img src="img/mImg5.jfif" style="width:120px">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 border mx-3 p-2">
+                      <p>movie detail</p>
+                      <button type="button" class="btn btn-warning my-1">예고편</button>
+                    </div>
+                    <div class="col-sm-3 col-md-4 col-lg-4 mx-3 p-2">
+                      <div class="border p-2 my-1">
+                        <span class="mr-2" style="height: 100%">08/01 토</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                      <div class="border p-2 my-1">
+                        <span class="mr-2">08/02 일</span>
+                        <button type="button" class="btn btn-info my-1">09:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                        <button type="button" class="btn btn-info my-1">11:00</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+          </section>
+      </main>
+
+      <script>
+
+        var viewMovie = document.getElementById('viewByMovie');
+        var viewDate = document.getElementById('viewByDate');
+
+        function viewByMovie(){
+          viewMovie.style.display = 'block';
+          viewDate.style.display = 'none';
+        }
+      </script>
+  </body>
+</html>

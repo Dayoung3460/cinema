@@ -1,0 +1,18 @@
+
+
+main .sec2{
+    width: 950px;
+    display: contents;
+
+}
+
+main .sec2 .mDate,
+main .sec2 .mGenre,
+main .sec2 .container .mSchedule,
+main .sec2 .container .mDetail{
+     flex-wrap: nowrap;
+}
+
+main .sec2 #viewByMovie{
+    display: none;
+}
