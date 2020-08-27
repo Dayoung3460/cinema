@@ -30,42 +30,245 @@
 
         <!-- ========================= nav-bar ========================= -->
         <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <a class="navbar-brand" href="#">logo</a>
+            <a class="navbar-brand" href="#" id="home" onclick="logo()">logo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"  aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">상영영화</a>
+                    <a class="nav-link" href="#" onclick="openMovie()">상영영화</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">계봉 예정 영화</a>
+                    <a class="nav-link" href="#" onclick="upcomingMovies()">계봉 예정 영화</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">이벤트/공지</a>
+                    <a class="nav-link" href="#" onclick="openAnnouncement()">이벤트/공지</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">멤버쉽</a>
+                    <a class="nav-link" href="#" onclick="OpenMembership()">멤버쉽</a>
                 </li>
               </ul>
               <hr>
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0 menu-right">
                 <li class="nav-item active ">
-                    <a class="nav-link text-primary" href="#">로그인</a>
-                    
+                    <a class="nav-link text-primary" href="#" onclick="login()">로그인</a>
                 </li>
                 <li class="nav-item active ">
-                    <a class="nav-link text-primary" href="#">회원가입</a>
+                    <a class="nav-link text-primary" href="#" onclick="signup()">회원가입</a>
                 </li>
               </ul>
             </div>
           </nav>
         </header>
         <br>
-        <!-- =======================carousel container =======================-->
+
         <main>
-            <section class="sec1">
+          <!-- ======================= login ========================= -->
+
+
+        <div class="container" id="loginCon">
+          <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+              <div class="card my-5">
+                <div class="card-body">
+                  <h5 class="card-title info-color text-center text-uppercase">Log In</h5>
+                  <form class="card-form">
+                    <div class="form-label-group">
+                      <input type="email" id="loginEmail" class="form-control" placeholder="Email address" required autofocus>
+                      <label for="loginEmail">Email address</label>
+                    </div>
+                    <div class="form-label-group">
+                      <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                      <label for="loginPassword">Password</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                    <hr class="my-4">
+                    <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      <!-- ========================= signup ============================-->
+
+
+      <div class="container" id="signupCon">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card my-5">
+              <div class="card-body">
+                <h5 class="card-title info-color text-center text-uppercase">sign up</h5>
+                <form class="card-form">
+                  <div class="form-label-group">
+                    <input type="text" id="signupEmail" class="form-control" placeholder="Name" required autofocus>
+                    <label for="signupEmail">Name</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="email" id="signupEmail" class="form-control" placeholder="Email" required>
+                    <label for="signupEmail">Email</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="password" id="signupPw" class="form-control" placeholder="Password" required>
+                    <label for="signupPw">Password</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="tel" id="signupTel" class="form-control" placeholder="Phone Number" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" required>
+                    <label for="signupTel">Phone Number</label>
+                    <small class="text-muted mb-4 ml-4">format: 010-1234-5678
+                    </small>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign Up</button>
+                  <hr class="my-4">
+                  <div class="form-check custom-control custom-checkbox">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label" for="materialRegisterFormNewsletter">By clicking <em> Sign up</em> you agree to our
+                      <a href="" target="_blank">terms of service</a>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ========================== Upcoming movies ======================== -->
+
+      <div class="container-" id="upcomingM">
+        <div class="row justify-content-md-center">
+        <div class="card m-5" style="width: 17.5rem;">
+          <img class="card-img-top" src="./img/mImg1.jfif" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">title</h5>
+            <p class="card-text">Upcoming Date</p>
+            <a href="#" class="btn btn-primary" onclick="upcomingM1()">Details</a>
+          </div>
+        </div>
+        <div class="card m-5" style="width: 17.5rem;">
+          <img class="card-img-top" src="./img/mImg2.jfif" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">title</h5>
+            <p class="card-text">Upcoming Date</p>
+            <a href="#" class="btn btn-primary" onclick="upcomingM2">Details</a>
+          </div>
+        </div>
+        <div class="card m-5" style="width: 17.5rem;">
+          <img class="card-img-top" src="./img/mImg3.jfif" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">title</h5>
+            <p class="card-text">Upcoming Date</p>
+            <a href="#" class="btn btn-primary" onclick="upcomingM3">Details</a>
+          </div>
+        </div>
+        <div class="card m-5" style="width: 17.5rem;">
+          <img class="card-img-top" src="./img/mImg4.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">title</h5>
+            <p class="card-text">Upcoming Date</p>
+            <a href="#" class="btn btn-primary" onclick="upcomingM4">Details</a>
+          </div>
+        </div>
+        <div class="card m-5" style="width: 17.5rem;">
+          <img class="card-img-top" src="./img/mImg5.jfif" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">title</h5>
+            <p class="card-text">Upcoming Date</p>
+            <a href="#" class="btn btn-primary" onclick="upcomingM5">Details</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <!-- upcoming movie1 -->
+      <div class="container" id="upcomingDetail1">
+        <div class="row my-5 p-5 justify-content-md-center">
+          <div class="col-sm-3 col-md-4 col-lg-4 p-1">
+            <img class="" src="./img/mImg1.jfif">
+          </div>
+          <div class="col-sm-10 col-md-10 col-lg-6 p-5 border">
+            <p><b>Title</b></p>
+            <p><b></b>Director</b></p>
+            <p>Names</p>
+            <p><b></b>Cast</b></p>
+            <p>Names</p>
+            <p><b></b>Plot</b></p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit non facere, ratione consequatur hic quide</p>
+          </div>
+        </div>
+        <div class="trailer mb-5">
+            <div class="w-60 border embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- ========================= event / announcement ========================= -->
+
+      <div class="container" id="announcement">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">category</th>
+              <th scope="col">title</th>
+              <th scope="col">date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>event</td>
+              <td>Special poster provided</td>
+              <td>2002.09.01</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>announcement</td>
+              <td>Get 500 point</td>
+              <td>2002.09.01</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>event</td>
+              <td>Pricess package</td>
+              <td>2002.09.01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- =======================membership ==========================-->
+
+      <div class="container" id="membership">
+        <div class="row my-5 p-5 justify-content-md-center">
+          <div class="col-sm-3 col-md-4 col-lg-4 p-1 m-5">
+            <img class="" src="./img/card1.jpg">
+          </div>
+          <div class="col-sm-10 col-md-10 col-lg-6 p-3 ml-5 border">
+            <p><b>Membership Details</b></p>
+          </div>
+        </div>
+        <div class="container mb-5 border">
+          <p><b></b>발급 안내</b></p>
+        </div>
+        <div class="container border">
+          <p><b></b>등급 소개 및 등급별 혜택</b></p>
+        </div>
+      </div>
+
+
+          <!-- ======================= carousel container =======================-->
+            <section class="sec1" id="sec1">
                 <div id="demo" class="carousel slide mt-3" data-ride="carousel">
 
                     <!-- Indicators -->
@@ -98,8 +301,9 @@
                 </div>
           </section>
           
-          <section class="sec2">
-              <!-- ========================movie section=============================== -->
+          <!-- ========================movie section=============================== -->     
+
+          <section class="sec2" id="sec2">
               <div class="container d-flex justify-content-center"><br> 
                 <div class="row mt-5"> 
                     <div class="col-15 w-15 mr-3" > 
@@ -112,28 +316,28 @@
               </div> 
               <br>
               <div id="viewByDate">
-                <div class="container d-flex justify-content-center"><br>
+                <div class="container d-flex justify-content-center dateCon"><br>
                   <div class="row my-3 mx-5 mDate"> 
-                    <div class="col mx-1"> 
-                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    <div class="mx-2"> 
+                      <button type="button" class="btn btn-secondary">8.1 월</button>
                     </div> 
-                    <div class="col mx-1"> 
-                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    <div class="mx-2"> 
+                      <button type="button" class="btn btn-secondary">8.1 월</button>
                     </div> 
-                    <div class="col mx-1"> 
-                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    <div class="mx-2"> 
+                      <button type="button" class="btn btn-secondary">8.1 월</button>
                     </div>
-                    <div class="col mx-1"> 
-                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    <div class="mx-2"> 
+                      <button type="button" class="btn btn-secondary">8.1 월</button>
                     </div>
-                    <div class="col mx-1"> 
-                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    <div class="mx-2"> 
+                      <button type="button" class="btn btn-secondary">8.1 월</button>
                     </div>
-                    <div class="col mx-1"> 
-                      <button type="button" class="btn btn-secondary">08.01 월</button>
+                    <div class="mx-2"> 
+                      <button type="button" class="btn btn-secondary">8.1 월</button>
                     </div>
-                    <div class="col mx-1"> 
-                      <button type="button" class="btn btn-success btn-lg mt-2"><i class="fas fa-calendar-alt"></i></button>
+                    <div class="mx-2"> 
+                      <button type="button" class="btn btn-success btn-lg"><i class="fas fa-calendar-alt"></i></button>
                     </div>
                   </div> 
                 </div>
@@ -376,20 +580,13 @@
                   </div>
                 </div>
               </div>
-              
-              
           </section>
+
+          
       </main>
 
-      <script>
-
-        var viewMovie = document.getElementById('viewByMovie');
-        var viewDate = document.getElementById('viewByDate');
-
-        function viewByMovie(){
-          viewMovie.style.display = 'block';
-          viewDate.style.display = 'none';
-        }
+      <script type="text/javascript" src="/js/main.js">
+        
       </script>
   </body>
 </html>
