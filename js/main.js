@@ -26,6 +26,8 @@ function openMovie(){
   signupCon.style.display = 'none';
   upcomingDetail1.style.display = 'none';
   upcomingM.style.display = 'none';
+  announcement.style.display = 'none';
+  membership.style.display = 'none';
 }
 
 function viewByMovie(){
@@ -44,6 +46,7 @@ function login(){
     signupCon.style.display = 'none';
     loginCon.style.display = 'block';
     membership.style.display = 'none';
+    announcement.style.display = 'none';
   }
 
 function signup(){
@@ -52,6 +55,8 @@ function signup(){
   loginCon.style.display = 'none';
   signupCon.style.display = 'block';
   membership.style.display = 'none';
+  announcement.style.display = 'none';
+
 }
 
 
@@ -63,22 +68,26 @@ function upcomingMovies(){
   loginCon.style.display = 'none';
   signupCon.style.display = 'none';
   upcomingDetail1.style.display = 'none';
+  announcement.style.display = 'none';
+  membership.style.display = 'none';
 }
 
 function upcomingM1(){
   upcomingDetail1.style.display = 'block';
   upcomingM.style.display = 'none';
   announcement.style.display = 'none';
+  membership.style.display = 'none';
 }
 
 function openAnnouncement(){
-  announcement.style.display = 'block'
+  announcement.style.display = 'block';
   upcomingM.style.display = 'none';
   sec1.style.display = 'none';
   sec2.style.display = 'none';
   loginCon.style.display = 'none';
   signupCon.style.display = 'none';
   membership.style.display = 'none';
+
 }
 
 function OpenMembership(){
@@ -88,8 +97,6 @@ function OpenMembership(){
   sec2.style.display = 'none';
   loginCon.style.display = 'none';
   signupCon.style.display = 'none';
-  announcement.style.display = 'none'
+  announcement.style.display = 'none';
 
 }
-
-
