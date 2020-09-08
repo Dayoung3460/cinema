@@ -1,4 +1,7 @@
-
+a {
+  text-decoration: none;
+  color: #000000;
+}
 
 main .sec2{
     width: 950px;
@@ -22,8 +25,6 @@ main .sec2 #viewByMovie{
 
 
 /* log in, sign up  */
-
-
 #loginCon,
 #signupCon,
 #upcomingM,
@@ -48,21 +49,21 @@ main .sec2 #viewByMovie{
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem 0 rgba(0, 0, 0, 0.5);
   }
-  
+
   .card .card-title {
     margin-bottom: 2rem;
     font-weight: 900;
     font-size: 1.5rem;
   }
-  
+
   .card .card-body {
     padding: 2rem;
   }
-  
+
   .card-form {
     width: 100%;
   }
-  
+
   .card-form .btn {
     font-size: 80%;
     border-radius: 5rem;
@@ -70,22 +71,22 @@ main .sec2 #viewByMovie{
     font-weight: bold;
     padding: 1rem;
   }
-  
+
   .form-label-group {
     position: relative;
     margin-bottom: 1rem;
   }
-  
+
   .form-label-group input {
     height: auto;
     border-radius: 2rem;
   }
-  
+
   .form-label-group>input,
   .form-label-group>label {
     padding: .75rem 1.5rem;
   }
-  
+
   .form-label-group>label {
     position: absolute;
     top: 0;
@@ -95,40 +96,40 @@ main .sec2 #viewByMovie{
     margin-bottom: 0;
     color: #495057;
   }
-  
-  
+
+
   .form-label-group input::placeholder {
     color: transparent;
   }
-  
+
   .form-label-group input:not(:placeholder-shown) {
     padding-top: calc(.75rem + .75rem * (2 / 3));
     padding-bottom: calc(.75rem / 3);
   }
-  
+
   .form-label-group input:not(:placeholder-shown)~label {
     padding-top: calc(.75rem / 3);
     padding-bottom: calc(.75rem / 3);
     font-size: 12px;
     color: #777;
   }
-  
+
   .btn-google {
     color: white;
     background-color: #ea4335;
   }
-  
+
   .btn-facebook {
     color: white;
     background-color: #3b5998;
   }
-  
-  
+
+
 
 
   /* upcoming movies */
 
-  
+
   #upcomingM .row{
       margin-top: 150px;
   }
@@ -158,4 +159,9 @@ main .sec2 #viewByMovie{
   }
 
 
-
+  /* footer */
+  ul li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 30px;
+  }
