@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/includeHTML.js"> </script>
+  <!-- DataPicker start-->
+
+  <!-- DataPicker end-->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cinema</title>
+  </head>
+  <body>
+    <header class="fixed-top">
+      <!--================= top bar / social btns ================== -->
+      <div class="top-bar bg-light">
+          <div class="container">
+              <div class="col-12 text-right">
+                  <a class="nav-link text-primary" href="#" id="social">
+                      <i class="fab fa-facebook-f fa-lg mr-3"></i>
+                      <i class="fab fa-instagram-square fa-lg"></i>
+                   </a>
+              </div>
+          </div>
+      </div>
+
+      <!-- ========================= nav-bar ========================= -->
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <a class="navbar-brand" href="#" id="home" onclick="logo()">
+            <img src="img/card1.jpg" alt="logo" style="width:40px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="openMovie()">상영영화</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="upcomingMovies()">계봉 예정 영화</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  공지/이벤트
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#" onclick="openAnnouncement()">공지</a>
+                  <a class="dropdown-item" href="#">이벤트</a>
+                </div>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="OpenMembership()">멤버쉽</a>
+              </li>
+            </ul>
+            <hr>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 menu-right">
+              <li class="nav-item active">
+                  <a class="nav-link text-primary" href="#" onclick="login()" >로그인</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link text-primary" href="#" onclick="signup()">회원가입</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <br>
+
+        <!-- ======================= login ========================= -->
+      <div class="container" id="loginCon">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card my-5">
+              <div class="card-body">
+                <h5 class="card-title info-color text-center text-uppercase">Log In</h5>
+                <form class="card-form">
+                  <div class="form-label-group">
+                    <input type="email" id="loginEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="loginEmail">Email address</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                    <label for="loginPassword">Password</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                  <hr class="my-4">
+                  <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+                  <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <!-- ========================= signup ============================-->
+
+
+    <div class="container" id="signupCon">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card my-5">
+            <div class="card-body">
+              <h5 class="card-title info-color text-center text-uppercase">sign up</h5>
+              <form class="card-form">
+                <div class="form-label-group">
+                  <input type="text" id="signupEmail" class="form-control" placeholder="Name" required autofocus>
+                  <label for="signupEmail">Name</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="email" id="signupEmail" class="form-control" placeholder="Email" required>
+                  <label for="signupEmail">Email</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="password" id="signupPw" class="form-control" placeholder="Password" required>
+                  <label for="signupPw">Password</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="tel" id="signupTel" class="form-control" placeholder="Phone Number" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" required>
+                  <label for="signupTel">Phone Number</label>
+                  <small class="text-muted mb-4 ml-4">format: 010-1234-5678
+                  </small>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign Up</button>
+                <hr class="my-4">
+                <div class="form-check custom-control custom-checkbox">
+                  <input type="checkbox" class="form-check-input">
+                  <label class="form-check-label" for="materialRegisterFormNewsletter">By clicking <em> Sign up</em> you agree to our
+                    <a href="" target="_blank">terms of service</a>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
